@@ -13,14 +13,14 @@ module.exports = function(grunt) {
       bookmarkletPrefix: 'javascript:'
     },
     lint: {
-      files: ['grunt.js', 'prettyprinter.js']
+      files: ['grunt.js', 'src/*.js']
     },
     //qunit: {
     //  files: ['test/**/*.html']
     //},
     concat: {
       dist: {
-        src: ['<banner:meta.banner>', '<banner:meta.bookmarkletPrefix>', '<file_strip_banner:prettyprinter.js>'],
+        src: ['<banner:meta.banner>', '<banner:meta.bookmarkletPrefix>', '<file_strip_banner:src/prettyprinter.js>'],
         dest: 'dist/prettyprinter.js'
       }
     },
@@ -33,6 +33,15 @@ module.exports = function(grunt) {
     watch: {
       files: '<config:lint.files>',
       tasks: 'lint qunit'
+    },
+    replace: {
+      dist: {
+        src: ['src/README.md'],
+        dest: '',
+        variables: {
+          bookmarklet: '<%= grunt.file.read(\'dist/prettyprinter.min.js\') %>'
+        }
+      }
     },
     jshint: {
       options: {
@@ -56,6 +65,7 @@ module.exports = function(grunt) {
   });
 
   // Default task.
+  grunt.loadNpmTasks('grunt-replace');
   grunt.registerTask('default', 'lint concat min');
 
 };

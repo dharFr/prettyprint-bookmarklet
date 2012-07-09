@@ -1,9 +1,3 @@
-/*! PrettyPrinter Bookmarklet - v0.1.0 - 2012-06-17
-* http://github.com/dharFr/prettyprint-bookmarklet
-* Copyright (c) 2012 Olivier Audard; Licensed MIT */
-
-javascript:
-
 (function prettyprinter(){
 	var scriptNode, cssNode;
 
