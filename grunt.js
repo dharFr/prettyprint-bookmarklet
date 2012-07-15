@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       files: '<config:lint.files>',
       tasks: 'lint qunit'
     },
-    replace: {
+    /*replace: {
       dist: {
         src: ['src/README.md'],
         dest: '',
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           bookmarklet: '<%= grunt.file.read(\'dist/prettyprinter.min.js\') %>'
         }
       }
-    },
+    },*/
     jshint: {
       options: {
         curly: true,
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.loadNpmTasks('grunt-replace');
+  //grunt.loadNpmTasks('grunt-replace');
   grunt.registerTask('default', 'lint concat min');
 
 };

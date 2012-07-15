@@ -1,4 +1,4 @@
-/*! PrettyPrinter Bookmarklet - v0.1.0 - 2012-06-17
+/*! PrettyPrinter Bookmarklet - v0.1.0 - 2012-07-16
 * http://github.com/dharFr/prettyprint-bookmarklet
 * Copyright (c) 2012 Olivier Audard; Licensed MIT */
 
