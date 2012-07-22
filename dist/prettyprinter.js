@@ -1,4 +1,4 @@
-/*! PrettyPrinter Bookmarklet - v0.1.0 - 2012-07-16
+/*! PrettyPrinter Bookmarklet - v0.1.0 - 2012-07-22
 * http://github.com/dharFr/prettyprint-bookmarklet
 * Copyright (c) 2012 Olivier Audard; Licensed MIT */
 
@@ -18,12 +18,12 @@ javascript:
 		/*global prettyPrint:true */
 		prettyPrint(); 
 	};
-	scriptNode.src='http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js';
+	scriptNode.src='http://www.dhar.fr/prettyprint-bookmarklet/libs/prettify.js';
 	document.body.appendChild(scriptNode);
 
 	// Loading google's prettyfy.css
 	cssNode=document.createElement('link');
-	cssNode.href='http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css';
+	cssNode.href='http://www.dhar.fr/prettyprint-bookmarklet/libs/prettify.css';
 	cssNode.setAttribute('rel', 'stylesheet');
 	document.body.appendChild(cssNode);
 }());
