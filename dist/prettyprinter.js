@@ -18,12 +18,12 @@ javascript:
 		/*global prettyPrint:true */
 		prettyPrint(); 
 	};
-	scriptNode.src='http://www.dhar.fr/prettyprint-bookmarklet/libs/prettify.js';
+	scriptNode.src='http://www.dhar.fr/prettyprint-bookmarklet/lib/prettify.js';
 	document.body.appendChild(scriptNode);
 
 	// Loading google's prettyfy.css
 	cssNode=document.createElement('link');
-	cssNode.href='http://www.dhar.fr/prettyprint-bookmarklet/libs/prettify.css';
+	cssNode.href='http://www.dhar.fr/prettyprint-bookmarklet/lib/prettify.css';
 	cssNode.setAttribute('rel', 'stylesheet');
 	document.body.appendChild(cssNode);
 }());
